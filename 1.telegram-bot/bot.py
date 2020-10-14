@@ -8,7 +8,7 @@ bot = telebot.TeleBot(os.getenv('TELEGRAM_API_TOKEN'))
 # обработчик для команды /start
 @bot.message_handler(commands=['start', 'старт'])
 def send_welcome(message):
-    bot.send_message(message.chat.id, f'Привет, <b>{message.chat.first_name}</b>, это тестовый бот канала @prog_way_blog. <b>Зачем?</b>\n\nОн нужен как тестовый образец для <a href="https://t.me/prog_way_blog/48">одного из последних постов</a>. Код бота открыт, его можно найти <a href="###">тут</a>.\n\nБот создан исключительно в обучающих целях и в скором времени будет отключен. Код останется всё так же доступен на github.\nАвтор: @grnbows', parse_mode="HTML", disable_web_page_preview=True)
+    bot.send_message(message.chat.id, f'Привет, <b>{message.chat.first_name}</b>, это тестовый бот канала @prog_way_blog. <b>Зачем?</b>\n\nОн нужен как тестовый образец для <a href="https://t.me/prog_way_blog/48">одного из последних постов</a>. Код бота открыт, его можно найти <a href="https://github.com/grnbows/telegram-channel-examples/tree/main/1.telegram-bot">тут</a>.\n\nБот создан исключительно в обучающих целях и в скором времени будет отключен. Код останется всё так же доступен на github.\nАвтор: @grnbows', parse_mode="HTML", disable_web_page_preview=True)
 
     # ! Метод отправки фото.
     with open('./assets/images/pw.jpg', 'rb') as photo:
@@ -29,7 +29,7 @@ def send_keyboard(message):
     # ! Создание кнопок для клавиатуры.
     channel = InlineKeyboardButton('Канал ProgWay', url='https://t.me/prog_way_blog')
     author = InlineKeyboardButton('Автор канала', url='https://t.me/grnbows')
-    code = InlineKeyboardButton('Код бота на Github', url='###')
+    code = InlineKeyboardButton('Код бота на Github', url='https://github.com/grnbows/telegram-channel-examples/tree/main/1.telegram-bot')
     
     # ! Добавление кнопок к клавиатуре.
     keyboard.add(channel, author)
