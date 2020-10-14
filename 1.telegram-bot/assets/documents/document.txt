@@ -1,2 +1,2 @@
-Ссылка на репозиторий: ###
+Ссылка на репозиторий: https://github.com/grnbows/telegram-channel-examples/tree/main/1.telegram-bot
 Ссылка на канал: https://t.me/prog_way_blog
